@@ -43,7 +43,7 @@ const Home = () => {
         </div>
         <div className='flex flex-col justify-center ms-6'>
           <h1 className='text-[52px] font-semibold'>Seth Arvin Gripon</h1>
-          <p className='text-[20px]'>I am an aspiring Frontend Developer aiming to become a Software Engineer</p>
+          <p className='text-[20px]'>I am an aspiring Frontend Developer and Python Developer, aiming to become a Software Engineer</p>
           <div className='flex justify-between my-4'>
             <button className='flex gap-2 items-center bg-secondary py-2 px-4 rounded-md text-[10px] hover:bg-primary transition ease-in-out duration-200'>
               Download CV

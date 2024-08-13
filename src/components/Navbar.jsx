@@ -7,9 +7,8 @@ const Navbar = () => {
   return (
     <nav className='fixed w-full bg-darkOne text-lightTwo py-3 drop-shadow-lg z-20'>
       <div className='flex justify-between items-center mx-32'>
-        <div>
-          {/* logo */}
-          <h4 className='text-xl'>Seth Arvin Gripon</h4>
+        <div className='w-[150px] cursor-pointer hover:scale-110 transition-all ease-in-out duration-300'>
+          <img classname='w-full object-cover object-center' src="src\assets\sethy-blue.png" alt="" />
         </div>
         <div>
           <ul className='flex items-center gap-2 text-md'>
