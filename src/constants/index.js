@@ -100,3 +100,36 @@ export const skillLogo = [
     hover: false
   }
 ]
+
+export const projectList = [
+  {
+    id: 1,
+    name: 'All Days Movers',
+    imgURL: 'src/assets/projects/all-day-movers.jpg',
+    lngList: ['React', 'JavaScript', 'Tailwind']
+  },
+  {
+    id: 2,
+    name: 'Todo List App',
+    imgURL: 'src/assets/projects/todo-list-app.png',
+    lngList: ['React', 'JavaScript', 'Tailwind']
+  },
+  {
+    id: 3,
+    name: 'Periodic Table of Elements',
+    imgURL: 'src/assets/projects/periodic-table-elements.jpg',
+    lngList: ['React', 'JavaScript', 'Tailwind', 'API']
+  },
+  {
+    id: 4,
+    name: 'KuroSuri',
+    imgURL: 'src/assets/projects/kurosuri.jpg',
+    lngList: ['Python', 'Machine Learning', 'Tkinter']
+  },
+  {
+    id: 5,
+    name: 'Pizza Ordering System',
+    imgURL: 'src/assets/projects/pizza-ordering-system.jpg',
+    lngList: ['Python', 'SQLite3', 'CustomTkinter']
+  },
+]
