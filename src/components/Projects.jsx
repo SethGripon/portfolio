@@ -7,7 +7,7 @@ const Projects = () => {
     <section className='text-lightTwo h-full'>
       <div className='flex flex-col items-center gap-5 mx-32 my-20 h-full'>
         <ul className='columns-1 sm:columns-2 pt-2 gap-4'>
-          <div className='relative flex justify-center py-4'>
+          <div className='relative flex justify-center pt-4 pb-6'>
             <h1 className='text-[48px] font-semibold select-none z-10'>Projects.</h1>
             <img className='absolute -top-4 -rotate-[60deg] w-[135px] opacity-60 z-0' src="src\assets\second-paint.png" alt="" />
           </div>

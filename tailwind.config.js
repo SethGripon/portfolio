@@ -18,12 +18,23 @@ export default {
       },
       animation: {
         "loop-scroll": "loop-scroll 40s linear infinite",
+        "pulse-size": "pulse-size 2s infinite",
+        'fade-heart': 'fade-heart .6s linear infinite',
       },
       keyframes: {
         "loop-scroll": {
           '0%': { transform: "translateX(0)"},
           '100%': { transform: "translateX(-100%)"}
-        }
+        },
+        "pulse-size": {
+          '0%, 100%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(1.55)' },
+        },
+        'fade-heart': {
+          '0%': { transform: 'rotate(-45deg)', transform: 'scale(1.07)' },
+          '80%': { transform: 'rotate(-45deg)', transform: 'scale(1)' },
+          '100%': { transform: 'rotate(-45deg)', transform: 'scale(.8)' },
+        },
       }
     },
   },
