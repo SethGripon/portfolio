@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom';
 import { FaMessage, FaHeart, FaDownload, FaAnglesDown } from "react-icons/fa6";
 
@@ -6,25 +6,30 @@ import { mediaLinks } from '../constants';
 
 const Home = () => {
   const [count, setCount] = useState(0)
-  const [isHovering, setIsHovering] = useState(false)
   const [y, setY] = useState(0)
+  const [x, setX] = useState(0)
   const invertal = useRef()
 
   const handleCount = () => {
     invertal.current = setInterval(() => {
       setCount(prev => prev + 1)
     }, 100)
-
-    setIsHovering(true)
   }
 
   const stopCount = () => {
     clearInterval(invertal.current)
-    setIsHovering(false)
   }
 
+  useEffect(() => {
+    window.onmousemove = (event) => {
+      setX((event.clientX - 400) / 650)
+      setY((event.clientY - 350) / 650)
+      card.style.transform = `rotate(3deg) translate(${x}rem, ${y}rem)`
+    }
+  }, [count])
+
   return (
-    <section className='text-lightTwo h-screen'>
+    <section name='home' className='text-lightTwo h-screen'>
       <div className='grid grid-cols-2 gap-5 mx-32 pt-20 h-full'>
         <div className='relative h-full w-full'>
           <div id='card' onMouseEnter={handleCount} onMouseLeave={stopCount} className='absolute glassmorphism group p-[40px] rotate-3 top-[40px] left-20 transition ease-in-out duration-100 z-10'>
@@ -33,7 +38,7 @@ const Home = () => {
             </div>
             <div className='flex justify-between text-2xl mt-4'>
               <div className='flex items-center gap-2'>
-                <FaHeart className='text-red-600 cursor-pointer group-hover:animate-fade-heart '/>
+                <FaHeart className='text-red-600 cursor-pointer group-hover:animate-fade-heart ' />
                 <p className='text-sm font-bold group-hover:animate-pulse-size ps-1'>{count}</p>
               </div>
               <FaMessage className='text-lightTwo opacity-50 cursor-pointer' />
@@ -50,14 +55,14 @@ const Home = () => {
               <FaDownload />
             </button>
             <button className='flex gap-2 items-center py-2 px-4 rounded-md text-[12px] hover:bg-darkTwo transition ease-in-out'>See more about me
-              <FaAnglesDown className='animate-pulse'/>
+              <FaAnglesDown className='animate-pulse' />
             </button>
           </div>
           <ul className='my-2 flex gap-4'>
             {mediaLinks.map((media) => (
               <li key={media.id}>
                 <Link to={media.URL} target="_blank">
-                  <media.icon className='text-lightTwo opacity-50 text-[26px] hover:opacity-100 hover:scale-125 transition-all ease-in-out duration-300'/>
+                  <media.icon className='text-lightTwo opacity-50 text-[26px] hover:opacity-100 hover:scale-125 transition-all ease-in-out duration-300' />
                 </Link>
               </li>
             ))}

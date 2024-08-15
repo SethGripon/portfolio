@@ -1,9 +1,16 @@
-import React from 'react'
+import React, { act, useState } from 'react'
 import { NavLink } from 'react-router-dom'
+import { Link } from 'react-scroll'
 
 import { navbarlist } from '../constants'
 
 const Navbar = () => {
+  const [activeNav, setActiveNav] = useState('')
+
+  const handleSetActive = (to) => {
+    setActiveNav(to)
+  };
+
   return (
     <nav className='fixed w-full bg-darkOne text-lightTwo py-3 drop-shadow-lg z-20'>
       <div className='flex justify-between items-center mx-32'>
@@ -15,25 +22,33 @@ const Navbar = () => {
             {navbarlist.map((navbar) => (
               navbar.name === 'Contact' ? (
                 <li key={navbar.id}>
-                  <NavLink to={navbar.path} className='bg-secondary hover:bg-primary hover:scale-110 py-2 px-3 mx-2 transition ease-in-out duration-300 rounded-md cursor-pointer'>
-                    {navbar.name}
-                  </NavLink>
+                  <Link
+                    activeClass='active'
+                    to={navbar.path}
+                    spy={true}
+                    smooth={true}
+                    offset={0}
+                    duration={900}
+                    onSetActive={handleSetActive}>
+                    <div className='bg-secondary hover:bg-primary hover:scale-110 py-2 px-3 mx-2 transition ease-in-out duration-300 rounded-md cursor-pointer'>
+                      {navbar.name}
+                    </div>
+                  </Link>
                 </li>
               ) : (
                 <li key={navbar.id}>
-                  <NavLink to={navbar.path}>
-                    {({ isActive }) => (
-                      isActive ? (
-                        <div className='text-secondary py-1 mx-2 transition ease-in-out duration-300 cursor-pointer'>
-                          {navbar.name}
-                        </div>
-                      ) : (
-                        <div className='text-lightOne hover:text-secondary py-1 mx-2 transition ease-in-out duration-300 cursor-pointer'>
-                          {navbar.name}
-                        </div>
-                      )
-                    )}
-                  </NavLink>
+                  <Link
+                    activeClass='active'
+                    to={navbar.path}
+                    spy={true}
+                    smooth={true}
+                    offset={navbar.offset}
+                    duration={900}
+                    onSetActive={handleSetActive}>
+                    <div className={`${ activeNav === navbar.path ? 'text-primary' : 'text-lightOne'} hover:text-secondary py-1 mx-2 transition ease-in-out duration-300 cursor-pointer`}>
+                      {navbar.name}
+                    </div>
+                  </Link>
                 </li>
               )
             ))}

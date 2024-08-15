@@ -4,7 +4,7 @@ import { projectList } from '../constants'
 
 const Projects = () => {
   return (
-    <section className='text-lightTwo h-full'>
+    <section name='project' className='text-lightTwo h-full'>
       <div className='flex flex-col items-center gap-5 mx-32 my-20 h-full'>
         <ul className='columns-1 sm:columns-2 pt-2 gap-4'>
           <div className='relative flex justify-center pt-4 pb-6'>

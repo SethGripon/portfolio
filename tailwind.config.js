@@ -18,7 +18,7 @@ export default {
       },
       animation: {
         "loop-scroll": "loop-scroll 40s linear infinite",
-        "pulse-size": "pulse-size 2s infinite",
+        "pulse-size": "pulse-size 1s infinite",
         'fade-heart': 'fade-heart .6s linear infinite',
       },
       keyframes: {

@@ -9,23 +9,27 @@ const skillIcons = [FaHtml5, FaCss3Alt, IoLogoJavascript, FaPython, FaGitAlt, Fa
 export const navbarlist = [
   {
     id: 1,
-    path: '/',
-    name: 'Home'
+    path: 'home',
+    name: 'Home',
+    offset: 0
   },
   {
     id: 2,
-    path: '/about',
-    name: 'About'
+    path: 'about',
+    name: 'About',
+    offset: -50
   },
   {
     id: 3,
-    path: '/projects',
-    name: 'Projects'
+    path: 'project',
+    name: 'Projects',
+    offset: -100
   },
   {
     id: 4,
-    path: '/contact',
-    name: 'Contact'
+    path: 'contact',
+    name: 'Contact',
+    offset: 0
   }
 ]
 

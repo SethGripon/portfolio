@@ -12,7 +12,7 @@ const About = () => {
   }
 
   return (
-    <section className='text-lightTwo bg-darkTwo h-screen selection-none'>
+    <section name='about' className='text-lightTwo bg-darkTwo h-screen selection-none'>
       <div className='flex flex-col items-center gap-5 mx-32 pt-20 h-full overflow-hidden'>
         <div className='relative flex'>
           <h1 className='text-[48px] font-semibold select-none z-10'>About.</h1>

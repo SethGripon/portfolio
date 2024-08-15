@@ -29,29 +29,32 @@ export const contactList = [
 
 const Contact = () => {
   return (
-    <section className='text-lightTwo bg-darkTwo h-screen'>
-      <div className='grid grid-cols-2 mx-32 pt-20 h-full'>
+    <section name='contact' className='text-lightTwo bg-darkTwo h-screen'>
+      <div className='grid grid-cols-2 mx-32 pt-10 h-full'>
         <div className='flex flex-col justify-center'>
           <div className='relative flex'>
             <h1 className='text-[48px] font-semibold select-none z-10'>Contact Me.</h1>
             <img className='absolute -top-4 left-10 -rotate-[60deg] w-[150px] opacity-60 z-0' src="src\assets\second-paint.png" alt="" />
           </div>
           <p className='my-5 me-10 text-[18px]'>Let's work togerther! I'll send replies as soon as I get it. Open to any job opportunities and collaborations.</p>
-          <ul className='my-2 flex gap-4'>
-            {mediaLinks.map((media) => (
-              <li key={media.id}>
-                <Link to={media.URL} target="_blank">
-                  <media.icon className='text-lightTwo opacity-50 text-[26px] hover:opacity-100 hover:scale-125 transition-all ease-in-out duration-300' />
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <div>
+            <p className='text-[12px] mt-3'>You may also message me on these platforms.</p>
+            <ul className='my-4 flex gap-4'>
+              {mediaLinks.map((media) => (
+                <li key={media.id}>
+                  <Link to={media.URL} target="_blank">
+                    <media.icon className='text-lightTwo opacity-50 text-[26px] hover:opacity-100 hover:scale-125 transition-all ease-in-out duration-300' />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
         <form action="" className='flex flex-col justify-center items-start'>
-          <h1 className='font-semibold text-[20px] py-2'>Send me a message.</h1>
+          <h1 className='font-semibold text-[20px] py-2'>Send me a message. 👋</h1>
           <div className='grid grid-cols-2 gap-4 w-full'>
             {contactList.map((contact) => (
-              <div className={`relative ${contact.name === 'subject' ? 'col-span-2' : (contact.name === 'message' ? 'col-span-2 h-[200px]' : '')}`}>
+              <div key={contact.id} className={`relative ${contact.name === 'subject' ? 'col-span-2' : (contact.name === 'message' ? 'col-span-2 h-[200px]' : '')}`}>
                 {contact.name === 'message' ? (
                   <textarea
                     type="text"
