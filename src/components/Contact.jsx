@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import { Link } from 'react-router-dom';
 import { FaArrowRightLong } from "react-icons/fa6";
 
@@ -8,7 +9,7 @@ export const contactList = [
   {
     id: 1,
     name: 'name',
-    text: 'First Name'
+    text: 'First Name',
   },
   {
     id: 2,
@@ -28,6 +29,27 @@ export const contactList = [
 ]
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_i2c9636', 'template_m49ndif', form.current, {
+        publicKey: 'KonYw1XTEozAM3T3Q',
+      })
+      .then(
+        () => {
+          alert('Your message has been sent, thanks for sending it and please wait patiently 😊')
+        },
+        (error) => {
+          alert('FAILED...', error.text)
+        },
+      )
+    
+    e.target.reset()
+  }
+
   return (
     <section name='contact' className='text-lightTwo bg-darkTwo h-screen'>
       <div className='grid grid-cols-2 mx-32 pt-10 h-full'>
@@ -50,7 +72,7 @@ const Contact = () => {
             </ul>
           </div>
         </div>
-        <form action="" className='flex flex-col justify-center items-start'>
+        <form ref={form} onSubmit={sendEmail} className='flex flex-col justify-center items-start'>
           <h1 className='font-semibold text-[20px] py-2'>Send me a message. 👋</h1>
           <div className='grid grid-cols-2 gap-4 w-full'>
             {contactList.map((contact) => (
@@ -74,7 +96,7 @@ const Contact = () => {
               </div>
             ))}
           </div>
-          <button className='flex items-center gap-2 py-2 px-4 bg-secondary my-4 rounded-lg hover:bg-primary transition ease-in-out duration-300 cursor-pointer'>
+          <button type="submit" value="Send" className='flex items-center gap-2 py-2 px-4 bg-secondary my-4 rounded-lg hover:bg-primary transition ease-in-out duration-300 cursor-pointer'>
             Shoot
             <FaArrowRightLong />
           </button>
