@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { FaArrowRightLong } from "react-icons/fa6";
 
 import { mediaLinks } from '../constants';
+import smallPaint from '../assets/second-paint.png'
 
 export const contactList = [
   {
@@ -56,7 +57,7 @@ const Contact = () => {
         <div className='flex flex-col justify-center'>
           <div className='relative flex'>
             <h1 className='text-[48px] font-semibold select-none z-10'>Contact Me.</h1>
-            <img className='absolute -top-4 left-10 -rotate-[60deg] w-[150px] opacity-60 z-0' src="src\assets\second-paint.png" alt="" />
+            <img className='absolute -top-4 left-10 -rotate-[60deg] w-[150px] opacity-60 z-0' src={smallPaint} alt="" />
           </div>
           <p className='my-5 me-10 text-[18px]'>Let's work togerther! I'll send replies as soon as I get it. Open to any job opportunities and collaborations.</p>
           <div>

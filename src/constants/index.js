@@ -3,6 +3,12 @@ import { IoLogoJavascript } from "react-icons/io5";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { SiFlask } from "react-icons/si";
 
+import allDayMovers from "../assets/projects/all-day-movers.jpg"
+import toDoListApp from "../assets/projects/todo-list-app.png"
+import periodicTable from "../assets/projects/periodic-table-elements.jpg"
+import kuriSuri from "../assets/projects/kurosuri.jpg"
+import pizzaSystem from "../assets/projects/pizza-ordering-system.jpg"
+
 const mediaIcons = [FaLinkedin, FaGithub, FaFacebook]
 const skillIcons = [FaHtml5, FaCss3Alt, IoLogoJavascript, FaPython, FaGitAlt, FaReact, RiTailwindCssFill, SiFlask]
 
@@ -109,31 +115,31 @@ export const projectList = [
   {
     id: 1,
     name: 'All Days Movers',
-    imgURL: 'src/assets/projects/all-day-movers.jpg',
+    imgURL: allDayMovers,
     lngList: ['React', 'JavaScript', 'Tailwind']
   },
   {
     id: 2,
     name: 'Todo List App',
-    imgURL: 'src/assets/projects/todo-list-app.png',
+    imgURL: toDoListApp,
     lngList: ['React', 'JavaScript', 'Tailwind']
   },
   {
     id: 3,
     name: 'Periodic Table of Elements',
-    imgURL: 'src/assets/projects/periodic-table-elements.jpg',
+    imgURL: periodicTable,
     lngList: ['React', 'JavaScript', 'Tailwind', 'API']
   },
   {
     id: 4,
     name: 'KuroSuri',
-    imgURL: 'src/assets/projects/kurosuri.jpg',
+    imgURL: kuriSuri,
     lngList: ['Python', 'Machine Learning', 'Tkinter']
   },
   {
     id: 5,
     name: 'Pizza Ordering System',
-    imgURL: 'src/assets/projects/pizza-ordering-system.jpg',
+    imgURL: pizzaSystem,
     lngList: ['Python', 'SQLite3', 'CustomTkinter']
   },
 ]

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-scroll'
 
 import { navbarlist } from '../constants'
+import sethyLogo from '../assets/sethy-blue.png'
 
 const Navbar = () => {
   const [activeNav, setActiveNav] = useState('')
@@ -22,7 +23,7 @@ const Navbar = () => {
           duration={900}
           onSetActive={handleSetActive}>
           <div className='w-[150px] cursor-pointer hover:scale-110 transition-all ease-in-out duration-300'>
-            <img classname='w-full object-cover object-center' src={`src/assets/sethy-blue.png`} alt="" />
+            <img classname='w-full object-cover object-center' src={sethyLogo} alt="" />
           </div>
         </Link>
         <div>

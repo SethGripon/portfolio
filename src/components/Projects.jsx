@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { projectList } from '../constants'
+import smallPaint from '../assets/second-paint.png'
 
 const Projects = () => {
   return (
@@ -9,11 +10,11 @@ const Projects = () => {
         <ul className='columns-1 sm:columns-2 pt-2 gap-4'>
           <div className='relative flex justify-center pt-4 pb-6'>
             <h1 className='text-[48px] font-semibold select-none z-10'>Projects.</h1>
-            <img className='absolute -top-4 -rotate-[60deg] w-[135px] opacity-60 z-0' src={`src/assets/second-paint.png`} alt="" />
+            <img className='absolute -top-4 -rotate-[60deg] w-[135px] opacity-60 z-0' src={smallPaint} alt="" />
           </div>
           {projectList.map((project) => (
             <li key={project.id} className='relative group mb-4 break-inside-avoid  overflow-hidden'>
-              <img src={`${project.imgURL}`} className='w-full object-cover rounded-lg' alt="" />
+              <img src={project.imgURL} className='w-full object-cover rounded-lg' alt="" />
               <div className='absolute bottom-4 left-5 z-10 translate-y-20 group-hover:translate-y-0 transition-all ease-in-out duration-500'>
                 <h1 className='font-semibold text-[24px]'>{project.name}</h1>
                 <ul className='flex gap-2'>

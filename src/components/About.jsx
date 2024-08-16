@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 
 import { skillLogo } from '../constants'
+import smallPaint from '../assets/second-paint.png'
 
 const About = () => {
   const [logos, setLogos] = useState(skillLogo)
@@ -16,7 +17,7 @@ const About = () => {
       <div className='flex flex-col items-center gap-5 mx-32 pt-20 h-full overflow-hidden'>
         <div className='relative flex'>
           <h1 className='text-[48px] font-semibold select-none z-10'>About.</h1>
-          <img className='absolute -top-4 -rotate-[60deg] w-[135px] opacity-60 z-0' src={`src/assets/second-paint.png`} alt="" />
+          <img className='absolute -top-4 -rotate-[60deg] w-[135px] opacity-60 z-0' src={smallPaint} alt="" />
         </div>
         <div className='my-2 px-[70px]'>
           <p className='text-[18px] text-center'>I graduated with a bachelor's degree in <strong className='text-secondary'>Computer Science</strong> from Polytechnic University of the Philippines. My passion lies in creating user-centric experiences through engaging and responsive web design. At the moment, I am mainly working on Frontend Development using <strong className='text-secondary'>ReactJS</strong>, increasing my skills by understanding Full-Stack development such as MERN.</p>
@@ -24,7 +25,7 @@ const About = () => {
         <div className='flex flex-col items-center gap-5 mx-32 mt-10'>
           <div className='relative flex'>
             <h1 className='text-[48px] font-semibold select-none z-10'>Skills.</h1>
-            <img className='absolute -top-4 -rotate-[60deg] w-[135px] opacity-60 z-0' src={`src/assets/second-paint.png`} alt="" />
+            <img className='absolute -top-4 -rotate-[60deg] w-[135px] opacity-60 z-0' src={smallPaint} alt="" />
           </div>
           <div className='flex w-[650px] overflow-hidden skill-fade'>
             <ul className='flex gap-10 ps-5 animate-loop-scroll'>
