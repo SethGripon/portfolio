@@ -22,7 +22,7 @@ const Navbar = () => {
           duration={900}
           onSetActive={handleSetActive}>
           <div className='w-[150px] cursor-pointer hover:scale-110 transition-all ease-in-out duration-300'>
-            <img classname='w-full object-cover object-center' src="src\assets\sethy-blue.png" alt="" />
+            <img classname='w-full object-cover object-center' src={`src/assets/sethy-blue.png`} alt="" />
           </div>
         </Link>
         <div>

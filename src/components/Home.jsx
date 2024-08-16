@@ -34,7 +34,7 @@ const Home = () => {
         <div className='relative h-full w-full'>
           <div id='card' onMouseEnter={handleCount} onMouseLeave={stopCount} className='absolute glassmorphism group p-[40px] rotate-3 top-[40px] left-20 transition ease-in-out duration-100 z-10'>
             <div className='h-[350px] w-[300px] overflow-hidden rounded-xl border border-gray-600'>
-              <img className='object-cover h-[375px] w-full' src="src/assets/grad-pic.png" alt="" />
+              <img className='object-cover h-[375px] w-full' src={`src/assets/grad-pic.png`} alt="" />
             </div>
             <div className='flex justify-between text-2xl mt-4'>
               <div className='flex items-center gap-2'>
@@ -44,7 +44,7 @@ const Home = () => {
               <FaMessage className='text-lightTwo opacity-50 cursor-pointer' />
             </div>
           </div>
-          <img className="absolute top-9 right-7 h-[500px] w-[500px] rotate-[24deg] transform scale-125 z-0" src="src/assets/first-paint.png" alt="" />
+          <img className="absolute top-9 right-7 h-[500px] w-[500px] rotate-[24deg] transform scale-125 z-0" src={`src/assets/first-paint.png`} alt="" />
         </div>
         <div className='flex flex-col justify-center ms-6'>
           <h1 className='text-[52px] font-semibold'>Seth Arvin Gripon</h1>
