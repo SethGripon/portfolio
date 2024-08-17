@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaFacebook, FaHtml5, FaCss3Alt, FaPython, FaGitAlt, FaReact } from "react-icons/fa6";
+import { FaGithub, FaLinkedin, FaFacebook, FaHtml5, FaCss3Alt, FaPython, FaGitAlt, FaReact, FaInstagram } from "react-icons/fa6";
 import { IoLogoJavascript } from "react-icons/io5";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { SiFlask } from "react-icons/si";
@@ -9,7 +9,7 @@ import periodicTable from "../assets/projects/periodic-table-elements.jpg"
 import kuriSuri from "../assets/projects/kurosuri.jpg"
 import pizzaSystem from "../assets/projects/pizza-ordering-system.jpg"
 
-const mediaIcons = [FaLinkedin, FaGithub, FaFacebook]
+const mediaIcons = [FaLinkedin, FaGithub, FaFacebook, FaInstagram]
 const skillIcons = [FaHtml5, FaCss3Alt, IoLogoJavascript, FaPython, FaGitAlt, FaReact, RiTailwindCssFill, SiFlask]
 
 export const navbarlist = [
@@ -57,6 +57,27 @@ export const mediaLinks = [
     name: 'Facebook',
     URL: 'https://www.facebook.com/griponseth',
     icon: mediaIcons[2]
+  }
+]
+
+export const contactLinks = [
+  {
+    id: 1,
+    name: 'LinkedIn',
+    URL: 'https://www.linkedin.com/in/seth-arvin-gripon/',
+    icon: mediaIcons[0]
+  },
+  {
+    id: 3,
+    name: 'Facebook',
+    URL: 'https://www.facebook.com/griponseth',
+    icon: mediaIcons[2]
+  },
+  {
+    id: 3,
+    name: 'Instagram',
+    URL: 'https://www.instagram.com/_sethings',
+    icon: mediaIcons[3]
   }
 ]
 

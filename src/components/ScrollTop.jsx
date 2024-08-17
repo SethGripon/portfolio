@@ -15,7 +15,7 @@ const ScrollTop = () => {
   return (
     <>
       <motion.div
-        className='fixed bottom-3 right-8 text-lightOne bg-darkOne cursor-pointer'
+        className='sm:bottom-3 fixed bottom-6 right-8 text-lightOne bg-darkOne cursor-pointer'
         initial={{ opacity: 0 }}
         animate={controls}
         transition={{ duration: 0.8 }}
