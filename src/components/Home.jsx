@@ -31,10 +31,10 @@ const Home = () => {
   }, [count])
 
   return (
-    <section name='home' className='text-lightTwo h-screen'>
-      <div className='md:grid-cols-2 md:px-32 md:mx-0 xs:mx-10 mx-4 md:gap-5 grid pt-20 h-full overflow-hidden'>
+    <section name='home' className='text-lightTwo md:h-screen h-full'>
+      <div className='md:grid-cols-2 md:px-32 md:mx-0 xs:mx-10 mx-4 md:gap-5 grid pt-20 pb-10 h-full overflow-hidden'>
         <div className='relative h-full w-full flex justify-center'>
-          <div id='card' onMouseEnter={handleCount} onMouseLeave={stopCount} className='lg:left-20 md:absolute md:p-[40px] p-[25px] pb-0 glassmorphism group rotate-3 top-[40px] -left-5 transition ease-in-out duration-100 z-10'>
+          <div id='card' onMouseEnter={handleCount} onMouseLeave={stopCount} className='lg:left-20 md:absolute md:p-[40px] p-[25px] pb-2 glassmorphism group rotate-3 top-[40px] -left-5 transition ease-in-out duration-100 z-10'>
             <div className='md:h-[350px] md:w-[300px] xs:h-[260px] xs:w-[245px] w-[220px] overflow-hidden rounded-xl border border-gray-600'>
               <img className='h-full w-full' src={sethGradPic} alt="" />
             </div>
