@@ -14,7 +14,7 @@ const About = () => {
 
   return (
     <section name='about' className='text-lightTwo bg-darkTwo h-screen selection-none'>
-      <div className='md:mx-0 xs:mx-10 mx-6 flex flex-col items-center gap-5 pt-20 h-full overflow-hidden'>
+      <div className='md:mx-0 xs:mx-10 mx-6 flex flex-col items-center justify-center gap-5 h-full overflow-hidden'>
         <div className='relative flex'>
           <h1 className='lg:text-[48px] xs:text-[32px] text-[24px] font-semibold select-none z-10'>About.</h1>
           <img className='absolute -top-4 -rotate-[60deg] w-[135px] opacity-60 z-0' src={smallPaint} alt="" />

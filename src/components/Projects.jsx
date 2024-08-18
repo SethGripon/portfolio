@@ -6,7 +6,7 @@ import smallPaint from '../assets/second-paint.png'
 const Projects = () => {
   return (
     <section name='project' className='text-lightTwo h-full'>
-      <div className='md:mx-32 xs:mx-10 mx-4 flex flex-col items-center gap-5 my-20 h-full'>
+      <div className='md:mx-32 xs:mx-10 mx-4 flex flex-col items-center gap-5 my-10 h-full'>
         <ul className='columns-1 sm:columns-2 pt-2 gap-4'>
           <div className='relative flex justify-center pt-4 pb-6'>
             <h1 className='lg:text-[48px] xs:text-[32px] text-[24px] font-semibold select-none z-10'>Projects.</h1>

@@ -76,7 +76,7 @@ const Navbar = () => {
                       to={navbar.path}
                       spy={true}
                       smooth={true}
-                      offset={0}
+                      offset={navbar.offset}
                       duration={900}
                       onSetActive={handleSetActive}
                       onClick={() => setToggleMenu(prev => !prev)}>

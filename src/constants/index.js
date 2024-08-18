@@ -23,7 +23,7 @@ export const navbarlist = [
     id: 2,
     path: 'about',
     name: 'About',
-    offset: -50
+    offset: -20
   },
   {
     id: 3,
@@ -35,7 +35,7 @@ export const navbarlist = [
     id: 4,
     path: 'contact',
     name: 'Contact',
-    offset: 0
+    offset: -40
   }
 ]
 
