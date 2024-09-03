@@ -147,7 +147,7 @@ export const projectList = [
   },
   {
     id: 3,
-    name: 'Periodic Table of Elements',
+    name: 'Periodic Table: Guess that Element!',
     imgURL: periodicTable,
     lngList: ['React', 'JavaScript', 'Tailwind', 'API']
   },

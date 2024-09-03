@@ -34,7 +34,7 @@ const Home = () => {
     <section name='home' className='text-lightTwo h-screen'>
       <div className='md:grid-cols-2 md:px-32 md:mx-0 xs:mx-10 mx-4 md:gap-5 grid pt-20 pb-10 h-full overflow-hidden'>
         <div className='relative h-full w-full flex justify-center items-center'>
-          <div id='card' onMouseEnter={handleCount} onMouseLeave={stopCount} className='md:p-[40px] p-[25px] pb-2 glassmorphism group rotate-3 transition ease-in-out duration-100 z-10'>
+          <div id='card' onMouseEnter={handleCount} onMouseLeave={stopCount} className='md:p-[40px] p-[25px] pb-3 glassmorphism group rotate-3 transition ease-in-out duration-100 z-10'>
             <div className='xl:h-[450px] xl:w-[400px] md:h-[300px] md:w-[250px] xs:h-[225px] xs:w-[200px] w-[175px] overflow-hidden rounded-xl border border-gray-600'>
               <img className='h-full w-full' src={sethGradPic} alt="" />
             </div>
@@ -52,10 +52,10 @@ const Home = () => {
           <h1 className='xl:text-[72px] md:text-[52px] xs:text-[32px] text-[24px] font-semibold'>Seth Arvin Gripon</h1>
           <p className='xl:text-[24px] md:text-[20px] xs:text-[16px] text-[10px]'>I am an aspiring Frontend Developer and Python Developer, aiming to become a Software Engineer</p>
           <div className='flex justify-between md:my-4 my-2'>
-            <button className='xl:text-[16px] xs:text-[12px] text-[8px] flex gap-2 items-center bg-secondary py-2 px-4 rounded-md hover:bg-primary transition ease-in-out duration-200'>
+            <Link to={'/files/SethArvinGripon_Resume.pdf'} target="_blank" download className='xl:text-[16px] xs:text-[12px] text-[8px] flex gap-2 items-center bg-secondary py-2 px-4 rounded-md hover:bg-primary transition ease-in-out duration-200'>
               Download CV
-              <FaDownload />
-            </button>
+              <FaDownload />  
+            </Link>
             <button className='xl:text-[16px] xs:text-[12px] text-[8px] flex gap-2 items-center py-2 px-4 rounded-md hover:bg-darkTwo transition ease-in-out'>See more about me
               <FaAnglesDown className='animate-pulse' />
             </button>

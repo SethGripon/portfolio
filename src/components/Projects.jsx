@@ -13,7 +13,7 @@ const Projects = () => {
             <img className='absolute -top-4 -rotate-[60deg] w-[135px] opacity-60 z-0' src={smallPaint} alt="" />
           </div>
           {projectList.map((project) => (
-            <li key={project.id} className='relative group mb-4 break-inside-avoid  overflow-hidden'>
+            <li key={project.id} className='relative group mb-4 break-inside-avoid overflow-hidden cursor-pointer'>
               <img src={project.imgURL} className='w-full object-cover rounded-lg' alt="" />
               <div className='absolute bottom-4 left-5 z-10 translate-y-20 group-hover:translate-y-0 transition-all ease-in-out duration-500'>
                 <h1 className='lg:text-[24px] xs:text-[18px] text-[12px] font-semibold'>{project.name}</h1>
